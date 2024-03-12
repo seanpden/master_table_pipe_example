@@ -7,7 +7,7 @@ import datastructs
 import helper
 
 
-def init():
+def init() -> None:
     dotenv.load_dotenv(override=True)
     logging.basicConfig(
         filename="src/logs/app.log",
@@ -20,7 +20,7 @@ def init():
     logging.info("----------------------------------")
 
 
-def handle_flagship_products():
+def handle_flagship_products() -> None:
     table_name: str = "flagship_product_mt"
     data_path: str = f"src/tests/{table_name}.csv"
     schema: dict = datastructs.product_version.__annotations__
@@ -33,7 +33,7 @@ def handle_flagship_products():
     helper.write_to_table(df=data, table_name=table_name)
 
 
-def handle_reason_code():
+def handle_reason_code() -> None:
     table_name: str = "reason_code_mt"
     data_path: str = f"src/tests/{table_name}.csv"
     schema: dict = datastructs.reason_code_mt.__annotations__
@@ -53,7 +53,7 @@ def handle_user_input() -> tuple[bool, bool]:
     return flagship_module, reason_code_module
 
 
-def main():
+def main() -> None:
     init()
 
     flagship_module, reason_code_module = handle_user_input()

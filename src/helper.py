@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-import pandas as pd
+import pandas as pd  # type: ignore
 import polars as pl
 import sqlalchemy.exc
 
@@ -16,7 +16,7 @@ def check_if_valid_data(data: pl.DataFrame) -> None:
         raise ValueError("Data is empty")
 
     # checking if data has null values
-    null_value_count = data.null_count().pipe(sum).item()
+    null_value_count = data.null_count().pipe(sum).item() # type: ignore
     if null_value_count != 0:
         logging.error(f"Data has {null_value_count} null values.\n{data.null_count()}")
         raise ValueError(f"Data has {null_value_count} null values")
@@ -50,7 +50,7 @@ def write_to_table(df: pl.DataFrame, table_name: str) -> None:
     try:
         df.write_database(
             table_name=table_name,
-            connection=os.environ.get("CONNECTION_STRING"),
+            connection=os.environ["CONNECTION_STRING"],
             if_table_exists="append",
         )
         logging.info(f"Data successfully written to {table_name}")
