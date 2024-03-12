@@ -1,0 +1,201 @@
+2024-02-28 14:13:19 | DEBUG:root: Starting test_module...
+2024-02-28 14:13:19 | INFO:root: Getting data from src/tests/test_table.csv
+2024-02-28 14:13:19 | INFO:root: Writing data to model_test
+2024-02-28 14:13:20 | ERROR:root: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violation of PRIMARY KEY constraint 'PK__model_te__3213E83F0694304D'. Cannot insert duplicate key in object 'dbo.model_test'. The duplicate key value is (first). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO model_test (id, flagship_product, ver, freeze_date, release_date, sunset_date, is_active) VALUES (?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('first', 'LME', '1.0.1', datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), 0, 'second', 'PBW', '3.0.0', datetime.datetime(2021, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-02-28 14:13:44 | DEBUG: Starting test_module...
+2024-02-28 14:13:44 | INFO: Getting data from src/tests/test_table.csv
+2024-02-28 14:13:44 | INFO: Writing data to model_test
+2024-02-28 14:13:44 | ERROR: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violation of PRIMARY KEY constraint 'PK__model_te__3213E83F0694304D'. Cannot insert duplicate key in object 'dbo.model_test'. The duplicate key value is (first). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO model_test (id, flagship_product, ver, freeze_date, release_date, sunset_date, is_active) VALUES (?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('first', 'LME', '1.0.1', datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), 0, 'second', 'PBW', '3.0.0', datetime.datetime(2021, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), datetime.datetime(2023, 5, 22, 0, 0), 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-03-04 09:58:16 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 09:58:16 | DEBUG: Checking if data is valid
+2024-03-04 09:58:16 | INFO: Data is valid
+2024-03-04 09:58:16 | INFO: Data successfully read from csv
+2024-03-04 09:58:16 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 09:58:17 | DEBUG: Checking if data is valid
+2024-03-04 09:58:17 | ERROR: Data has 121 null values.
+shape: (1, 7)
+\u250c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510
+\u2502 id  \u2506 flagship_product \u2506 ver \u2506 freeze_date \u2506 release_date \u2506 sunset_date \u2506 is_active \u2502
+\u2502 --- \u2506 ---              \u2506 --- \u2506 ---         \u2506 ---          \u2506 ---         \u2506 ---       \u2502
+\u2502 u32 \u2506 u32              \u2506 u32 \u2506 u32         \u2506 u32          \u2506 u32         \u2506 u32       \u2502
+\u255e\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2561
+\u2502 0   \u2506 0                \u2506 0   \u2506 121         \u2506 0            \u2506 0           \u2506 0         \u2502
+\u2514\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518
+2024-03-04 10:08:44 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 10:08:44 | DEBUG: Checking if data is valid
+2024-03-04 10:08:44 | INFO: Data is valid
+2024-03-04 10:08:44 | INFO: Data successfully read from csv
+2024-03-04 10:08:44 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 10:08:44 | DEBUG: Checking if data is valid
+2024-03-04 10:08:44 | ERROR: Data has 121 null values.
+shape: (1, 7)
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+| id  | flagship_product | ver | freeze_date | release_date | sunset_date | is_active |
+| --- | ---              | --- | ---         | ---          | ---         | ---       |
+| u32 | u32              | u32 | u32         | u32          | u32         | u32       |
++=====================================================================================+
+| 0   | 0                | 0   | 121         | 0            | 0           | 0         |
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+2024-03-04 10:10:39 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 10:10:39 | DEBUG: Checking if data is valid
+2024-03-04 10:10:39 | INFO: Data is valid
+2024-03-04 10:10:39 | INFO: Data successfully read from csv
+2024-03-04 10:10:39 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 10:10:40 | DEBUG: Checking if data is valid
+2024-03-04 10:10:40 | ERROR: Data has 121 null values.
+shape: (1, 7)
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+| id  | flagship_product | ver | freeze_date | release_date | sunset_date | is_active |
+| --- | ---              | --- | ---         | ---          | ---         | ---       |
+| u32 | u32              | u32 | u32         | u32          | u32         | u32       |
++=====================================================================================+
+| 0   | 0                | 0   | 121         | 0            | 0           | 0         |
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+2024-03-04 10:12:56 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 10:12:56 | DEBUG: Checking if data is valid
+2024-03-04 10:12:56 | DEBUG: shape: (121, 6)
++----------+------------------+---------+--------------+-------------+-----------+
+| id       | flagship_product | version | release_date | sunset_date | is_active |
+| ---      | ---              | ---     | ---          | ---         | ---       |
+| str      | str              | str     | date         | date        | bool      |
++================================================================================+
+| DP_10.0  | DP               | 10.0    | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2    | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2    | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1    | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0    | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …       | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0   | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0   | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0   | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0   | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1    | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+---------+--------------+-------------+-----------+
+2024-03-04 10:12:56 | INFO: Data is valid
+2024-03-04 10:12:56 | INFO: Data successfully read from csv
+2024-03-04 10:12:56 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 10:12:57 | DEBUG: Checking if data is valid
+2024-03-04 10:12:57 | DEBUG: shape: (121, 7)
++----------+------------------+-------+-------------+--------------+-------------+-----------+
+| id       | flagship_product | ver   | freeze_date | release_date | sunset_date | is_active |
+| ---      | ---              | ---   | ---         | ---          | ---         | ---       |
+| str      | str              | str   | str         | date         | date        | bool      |
++============================================================================================+
+| DP_10.0  | DP               | 10.0  | null        | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2  | null        | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2  | null        | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1  | null        | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0  | null        | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …     | …           | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0 | null        | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0 | null        | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0 | null        | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0 | null        | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1  | null        | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+-------+-------------+--------------+-------------+-----------+
+2024-03-04 10:12:57 | ERROR: Data has 121 null values.
+shape: (1, 7)
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+| id  | flagship_product | ver | freeze_date | release_date | sunset_date | is_active |
+| --- | ---              | --- | ---         | ---          | ---         | ---       |
+| u32 | u32              | u32 | u32         | u32          | u32         | u32       |
++=====================================================================================+
+| 0   | 0                | 0   | 121         | 0            | 0           | 0         |
++-----+------------------+-----+-------------+--------------+-------------+-----------+
+2024-03-04 10:15:47 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 10:15:47 | DEBUG: Checking if data is valid
+2024-03-04 10:15:47 | DEBUG: shape: (121, 6)
++----------+------------------+---------+--------------+-------------+-----------+
+| id       | flagship_product | version | release_date | sunset_date | is_active |
+| ---      | ---              | ---     | ---          | ---         | ---       |
+| str      | str              | str     | date         | date        | bool      |
++================================================================================+
+| DP_10.0  | DP               | 10.0    | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2    | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2    | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1    | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0    | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …       | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0   | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0   | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0   | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0   | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1    | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+---------+--------------+-------------+-----------+
+2024-03-04 10:15:47 | INFO: Data is valid
+2024-03-04 10:15:47 | INFO: Data successfully read from csv
+2024-03-04 10:15:47 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 10:15:48 | DEBUG: Checking if data is valid
+2024-03-04 10:15:48 | DEBUG: shape: (121, 6)
++----------+------------------+---------+--------------+-------------+-----------+
+| id       | flagship_product | version | release_date | sunset_date | is_active |
+| ---      | ---              | ---     | ---          | ---         | ---       |
+| str      | str              | str     | date         | date        | bool      |
++================================================================================+
+| DP_10.0  | DP               | 10.0    | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2    | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2    | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1    | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0    | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …       | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0   | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0   | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0   | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0   | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1    | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+---------+--------------+-------------+-----------+
+2024-03-04 10:15:48 | INFO: Data is valid
+2024-03-04 10:15:48 | INFO: Data successfully read from flagship_product_mt
+2024-03-04 10:18:33 | INFO: ----------------------------------
+2024-03-04 10:18:33 | INFO: Starting Master Table Pipeline Tests...
+2024-03-04 10:18:33 | INFO: ----------------------------------
+2024-03-04 10:18:33 | DEBUG: Getting data from src/tests/flagship_product_mt.csv
+2024-03-04 10:18:33 | DEBUG: Checking if data is valid
+2024-03-04 10:18:33 | DEBUG: shape: (121, 6)
++----------+------------------+---------+--------------+-------------+-----------+
+| id       | flagship_product | version | release_date | sunset_date | is_active |
+| ---      | ---              | ---     | ---          | ---         | ---       |
+| str      | str              | str     | date         | date        | bool      |
++================================================================================+
+| DP_10.0  | DP               | 10.0    | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2    | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2    | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1    | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0    | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …       | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0   | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0   | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0   | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0   | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1    | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+---------+--------------+-------------+-----------+
+2024-03-04 10:18:33 | INFO: Data is valid
+2024-03-04 10:18:33 | INFO: Data successfully read from csv
+2024-03-04 10:18:33 | DEBUG: Reading data from flagship_product_mt
+2024-03-04 10:18:34 | DEBUG: Checking if data is valid
+2024-03-04 10:18:34 | DEBUG: shape: (121, 6)
++----------+------------------+---------+--------------+-------------+-----------+
+| id       | flagship_product | version | release_date | sunset_date | is_active |
+| ---      | ---              | ---     | ---          | ---         | ---       |
+| str      | str              | str     | date         | date        | bool      |
++================================================================================+
+| DP_10.0  | DP               | 10.0    | 2011-10-01   | 2021-10-01  | true      |
+| DP_11.2  | DP               | 11.2    | 2013-06-01   | 2023-06-01  | true      |
+| DP_12.2  | DP               | 12.2    | 2014-08-01   | 2024-08-01  | true      |
+| DP_15.1  | DP               | 15.1    | 2015-11-01   | 2025-11-01  | true      |
+| DP_17.0  | DP               | 17.0    | 2016-12-01   | 2026-12-01  | true      |
+| …        | …                | …       | …            | …           | …         |
+| PB_9.0.0 | PB               | 9.0.0   | 2008-04-11   | 2021-12-01  | false     |
+| PB_9.1.0 | PB               | 9.1.0   | 2008-10-21   | 2021-12-01  | false     |
+| PB_9.2.0 | PB               | 9.2.0   | 2009-05-01   | 2021-12-01  | false     |
+| PB_9.3.0 | PB               | 9.3.0   | 2009-09-15   | 2021-12-01  | false     |
+| PB_LTL1  | PB               | LTL1    | 2011-12-01   | 2021-12-01  | false     |
++----------+------------------+---------+--------------+-------------+-----------+
+2024-03-04 10:18:34 | INFO: Data is valid
+2024-03-04 10:18:34 | INFO: Data successfully read from flagship_product_mt

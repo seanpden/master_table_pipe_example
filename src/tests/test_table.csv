@@ -1,0 +1,4 @@
+id,flagship_product,ver,freeze_date,release_date,sunset_date,is_active
+first,LME,1.0.1,2023-05-22,2023-05-22,2023-05-22,FALSE
+second,PBW,3.0.0,2021-05-22,2023-05-22,2023-05-22,TRUE
+third,PBW,1.2.3,2021-05-22,2023-05-22,2023-05-22,FALSE
