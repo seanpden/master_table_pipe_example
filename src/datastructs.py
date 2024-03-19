@@ -19,4 +19,3 @@ class reason_code_mt:
     reason_code: pl.String
     reason_class: pl.String
     description: pl.String
-    needs_approval: pl.String

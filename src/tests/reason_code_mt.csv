@@ -1,0 +1,12 @@
+id,reason_code,reason_class,description
+1,late,customer,Customer delay caused the postponement of the software go-live
+2,late,mcleod,Internal delay within McLeod led to the postponement of the software go-live
+3,resource_change,customer,Customer resource changes resulted in the postponement of the software go-live
+4,resource_change,mcleod,McLeod resource changes triggered the postponement of the software go-live
+5,cold_feet,customer,Customer perception of staff readiness necessitated the postponement of the software go-live
+6,no_resource,mcleod,Insufficient McLeod resources mandated the postponement of the software go-live
+7,no_resource,customer,Inadequate customer resources forced the postponement of the software go-live
+8,addition,customer,Customer expressed interest in enhancing engagement by adding a new product
+9,other,mcleod,Unspecified or unique circumstance on McLeod's behalf prompted the postponement of the software go-live
+10,other,customer,Unspecified or unique circumstance on the customer's behalf led to the postponement of the software go-live
+11,other,vendor,Unspecified or unique circumstance on the vendor's behalf caused the postponement of the software go-live

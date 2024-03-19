@@ -15,6 +15,7 @@ def init() -> None:
         format="%(asctime)s | %(levelname)s: %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    pl.Config.set_ascii_tables(True)
     logging.info("----------------------------------")
     logging.info("Starting Master Table Pipeline...")
     logging.info("----------------------------------")
@@ -42,6 +43,8 @@ def handle_reason_code() -> None:
         data_path=data_path,
         data_schema=schema,
     )
+
+    data.drop_in_place("id")
 
     helper.write_to_table(df=data, table_name=table_name)
 
